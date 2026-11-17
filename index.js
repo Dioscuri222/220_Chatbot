@@ -22,5 +22,17 @@ app.post("/api/chat", async (req,res) => {
                 error: "Messages harus berupa Array"
             });
         }
+
+        const response = await fetch(
+            "https://openrouter.ai/api/v1/chat/completions",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": Bearer ${process.env.OPENROUTER_API_KEY},
+                },
+            }
+        )
     }
 })
