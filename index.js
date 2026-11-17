@@ -34,7 +34,11 @@ app.post("/api/chat", async (req,res) => {
                 },
 
                 body: JSON.stringify({
-                    module: ""
+                    model: "inclustionai/ling-3.2-flash:free",
+                    messages: messages,
+                    temperature: 0.7,
+                    max_tokens: 1000,
+                    stream: true
                 })
             }
         )
