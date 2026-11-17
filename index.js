@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const path = require("path");
 
 dotenv.config();
 
@@ -7,11 +8,11 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req,res) => {
-    res.redirect("/index.html");
-})
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 app.post("/api/chat", async (req,res) => {
     try {
@@ -34,8 +35,8 @@ app.post("/api/chat", async (req,res) => {
                 },
 
                 body: JSON.stringify({
-                    model: "inclustionai/ling-3.2-flash:free",
-                    message: message,
+                    model: "inclusionai/ling-3.2-flash:free",
+                    messages: message,
                     temperature: 0.7,
                     max_tokens: 1000,
                     stream: true
