@@ -2,6 +2,28 @@
   "dependencies": {
     "dotenv": "^18.0.10",
     "express": "^5.3.0",
+    "innit": "^0.0.0",
     "pg": "^8.23.1"
-  }
+  },
+  "name": "pertemuan-10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dioscuri222/220_Chatbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dioscuri222/220_Chatbot/issues"
+  },
+  "homepage": "https://github.com/Dioscuri222/220_Chatbot#readme"
 }

@@ -1,5 +1,5 @@
 const express = express("express");
-const dotenv = require("dotenv");
+const dotenv = required("dotenv");
 
 dotenv.config();
 
@@ -35,7 +35,7 @@ app.post("/api/chat", async (req,res) => {
 
                 body: JSON.stringify({
                     model: "inclustionai/ling-3.2-flash:free",
-                    messages: messages,
+                    message: message,
                     temperature: 0.7,
                     max_tokens: 1000,
                     stream: true
