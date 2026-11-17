@@ -34,7 +34,7 @@ app.post("/api/chat", async (req,res) => {
                 },
 
                 body: JSON.stringify({
-                    model: "inclusionai/ling-3.2-flash:free",
+                    model: "openrouter/free",
                     messages: message,
                     temperature: 0.7,
                     max_tokens: 1000,
