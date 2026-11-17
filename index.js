@@ -80,6 +80,18 @@ app.post("/api/chat", async (req,res) => {
                 if (!trimmedLine) {
                     continue;
                 }
+                if (!trimmedLine.startsWith("data")) {
+                    continue;
+                }
+                if (!trimmedLine.startsWith("data:")) {
+                    continue;
+                }
+
+                const data = trimmedLine.slice(5).trim();
+
+                if (data === "[DONE]") {
+                    continue;
+                }
             }
         }
     }
